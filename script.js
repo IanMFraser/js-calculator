@@ -83,6 +83,10 @@ class Calculator {
     makeNegative() {
         this.currentOperand *= -1
     }
+
+    makePercentage() {
+        this.currentOperand *= 0.01
+    }
 }
 
 
@@ -125,5 +129,10 @@ allClearButton.addEventListener('click', button => {
 
 posNegButton.addEventListener('click', button => {
     calculator.makeNegative()
+    calculator.updateDisplay()
+})
+
+percentButton.addEventListener('click', button => {
+    calculator.makePercentage()
     calculator.updateDisplay()
 })
